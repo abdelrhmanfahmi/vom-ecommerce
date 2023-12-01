@@ -13,6 +13,9 @@ use App\Repository\ProductRepository;
 use App\Repository\Interfaces\SettingRepositoryInterface;
 use App\Repository\SettingRepository;
 
+use App\Repository\Interfaces\CartRepositoryInterface;
+use App\Repository\CartRepository;
+
 class RepositoryServiceProvider extends ServiceProvider
 {
     /**
@@ -23,5 +26,6 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(StoreRepositoryInterface::class, StoreRepository::class);
         $this->app->bind(ProductRepositoryInterface::class, ProductRepository::class);
         $this->app->bind(SettingRepositoryInterface::class, SettingRepository::class);
+        $this->app->bind(CartRepositoryInterface::class, CartRepository::class);
     }
 }

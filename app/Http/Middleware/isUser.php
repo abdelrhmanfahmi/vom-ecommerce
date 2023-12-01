@@ -14,7 +14,7 @@ class isUser
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next)
+    public function handle(Request $request, Closure $next , $guard = 'api')
     {
         if (Auth::guard($guard)->check()) {
             if (Auth::user()->type == 'user') {
