@@ -3,6 +3,12 @@
 Task shows that merchants can add their stores , products and make any product exception from vat ,,
 users in system can add products to thier carts and can calculate their total price of cart by authenticated user
 
+## Installation
+1- composer install
+2- php artisan jwt:secret
+3- make .env file set your database name, username and password
+4- php artisan migrate:fresh --seed
+
 ## APIS
 ** in apis i made system routing for each role that auth has auth routing , merchant has merchant routing and user has user routing handling in RouteServiceProvider file
 
@@ -19,6 +25,7 @@ users in system can add products to thier carts and can calculate their total pr
 
 1- using use Factory Design Pattern (repository design pattern) => make interfaces classes should follow interface methods
 2- using mysql database realtionships for system
-3- using policy for updataing product's vat (cannot update setting vat if products has vat already)
-4- using Requests File for every post request or put
-3- using newest laravel version to create update delete process in system
+3- using seeders in system for users, stores and products
+4- using policy for updataing product's vat (cannot update setting vat if products has vat already)
+5- using Requests File for every post request or put
+6- using newest laravel version to create update delete process in system
